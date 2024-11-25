@@ -1,0 +1,125 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('../../../../../public/images/background-signup.jpg');
+    background-position: center;
+
+    .form-wrapper::before {
+        content: "";
+        position: absolute;
+        min-width: 50%;
+        height: 100%;
+        border-radius: 30px;
+        pointer-events: none;
+        box-shadow: inset 0 0 0 2000px rgba(174, 174, 174, 0.31);
+    }
+
+    .form-wrapper {
+        width: 50%;
+        height: inherit;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-width: 20%;
+            margin-bottom: 3%;
+
+            h1 {
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 40px;
+                color: #FFFFFF;
+            }
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 500px;
+
+            .input-wrapper {
+                display: flex;
+                justify-content: center;
+                min-width: 300px;
+
+                input {
+                    padding: 3%;
+                    border: none;
+                    border-radius: 15px;
+                    font-size: 16px;
+                    background: #D4D4D4;
+                    min-width: 280px;
+                    margin: 5%;
+                }
+            }
+
+            .actions {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 20px;
+
+                .checkbox-wrapper {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #ffffff;
+                }
+
+                .button-wrapper {
+                    display: flex;
+                    justify-content: center;
+
+                    button {
+                        min-width: 250px;
+                        background-color: #3F3D40;
+                        padding: 10px 20px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #fff;
+                        background-color: #3F3D40;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .header {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        .form-wrapper::before {
+            content: "";
+            box-shadow: none;
+        }
+    }
+}
