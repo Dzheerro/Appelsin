@@ -7,6 +7,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, provideHttpClient, withFetch, withInterceptorsFromDi } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './i18n/', '.json');
@@ -26,7 +27,8 @@ export const appConfig: ApplicationConfig = {
           deps: [HttpClient]
         },
         defaultLanguage: 'en'
-      })
+      }),
+      BrowserAnimationsModule
     ])
   ]
 };
